@@ -1,0 +1,269 @@
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background-color: #f4f4f4;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+header {
+    position: relative;
+}
+
+.hero {
+    position: relative;
+    background: #e0e0e0;
+    padding: 50px;
+    text-align: center;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 0;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+}
+
+.profile-img-wrapper {
+    display: inline-block;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-bottom: 20px;
+    background: #fff;
+}
+
+.profile-img-wrapper img {
+    width: 100%;
+    height: auto;
+}
+
+/* Name and Tagline */
+h1 {
+    margin: 0;
+    font-size: 2.5em;
+    color: #000; /* Default: black in light mode */
+}
+
+.tagline {
+    font-size: 1.2em;
+    color: #555; /* Default: dark gray in light mode */
+}
+
+/* Contact Button */
+.contact-btn {
+    padding: 10px 20px;
+    font-size: 1em;
+    border: 2px solid transparent; /* Default border */
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, border-color 0.3s;
+    margin-top: 20px;
+}
+
+.contact-btn:hover {
+    background-color: #0056b3;
+    border-color: #0056b3; /* Border color on hover */
+}
+
+main {
+    padding: 20px;
+}
+
+.section {
+    margin-bottom: 20px;
+}
+
+.section h2 {
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    font-size: 1.5em;
+}
+
+.summary-card, .skill-card, .experience-card, .education-card, .certifications-card, .accomplishments-card, .languages-card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.summary-card:hover, .skill-card:hover, .experience-card:hover, .education-card:hover, .certifications-card:hover, .accomplishments-card:hover, .languages-card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.certifications-list, .accomplishments-list, .languages-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.certifications-list li, .accomplishments-list li, .languages-list li {
+    margin-bottom: 10px;
+}
+
+/* Print, Dark Mode, Mail, Call Buttons */
+.print-btn, .dark-mode-btn, .mail-btn, .call-btn, #toggleMode {
+    border: 2px solid #fff; /* White border in light mode */
+    transition: background-color 0.3s, border-color 0.3s;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.print-btn {
+    position: fixed;
+    bottom: 65px;
+    right: 22px;
+    padding: 10px 20px;
+    font-size: 1em;
+    background-color: #007bff;
+    color: #fff;
+}
+
+.print-btn:hover {
+    background-color: #0056b3;
+    border-color: #0056b3; /* Border color on hover */
+}
+
+.mail-btn {
+    position: fixed;
+    bottom: 100px;
+    right: 20px;
+    padding: 10px 20px;
+    font-size: 1em;
+    background-color: #28a745;
+    color: #fff;
+}
+
+.mail-btn:hover {
+    background-color: #218838;
+    border-color: #218838; /* Border color on hover */
+}
+
+.call-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 80px;
+    padding: 10px 20px;
+    font-size: 1em;
+    background-color: #dc3545;
+    color: #fff;
+}
+
+.call-btn:hover {
+    background-color: #c82333;
+    border-color: #c82333; /* Border color on hover */
+}
+
+/* Button for switching between Dark and Light modes */
+#toggleMode {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    font-size: 1em;
+    background-color: #333; /* Black in light mode */
+    color: #fff;
+    border: 2px solid transparent; /* Default border */
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+#toggleMode:hover {
+    background-color: #555;
+    border-color: #555; /* Border color on hover in light mode */
+}
+
+/* Dark Mode */
+.dark-mode {
+    background-color: #000;
+    color: #fff;
+}
+
+.dark-mode .hero {
+    background: #333;
+}
+
+.dark-mode h1, .dark-mode .tagline {
+    color: #fff; /* White in dark mode */
+}
+
+.dark-mode .summary-card, .dark-mode .skill-card, .dark-mode .experience-card, .dark-mode .education-card, .dark-mode .certifications-card, .dark-mode .accomplishments-card, .dark-mode .languages-card {
+    background: #444;
+    color: #fff;
+}
+
+.dark-mode .hero-content {
+    color: #fff;
+}
+
+.dark-mode .contact-btn {
+    background-color: #555;
+}
+
+.dark-mode .contact-btn:hover {
+    background-color: #777;
+    border-color: #777; /* Border color on hover in dark mode */
+}
+
+.dark-mode .print-btn {
+    background-color: #444;
+}
+
+.dark-mode .print-btn:hover {
+    background-color: #666;
+    border-color: #666; /* Border color on hover in dark mode */
+}
+
+.dark-mode .mail-btn {
+    background-color: #444;
+}
+
+.dark-mode .mail-btn:hover {
+    background-color: #666;
+    border-color: #666; /* Border color on hover in dark mode */
+}
+
+.dark-mode .call-btn {
+    background-color: #444;
+}
+
+.dark-mode .call-btn:hover {
+    background-color: #666;
+    border-color: #666; /* Border color on hover in dark mode */
+}
+
+/* Dark Mode button changes to blue */
+.dark-mode #toggleMode {
+    background-color: #007bff; /* Blue in dark mode */
+}
+
+.dark-mode #toggleMode:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+    border-color: #0056b3; /* Border color on hover in dark mode */
+}
+
+/* Contact Information Styles */
+.contact-info {
+    display: none;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
