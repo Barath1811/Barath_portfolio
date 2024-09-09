@@ -1,3 +1,7 @@
+let title = "Barath S - Resume";
+let summaryTitle = "Summary";
+document.getElementById("title").textContent = title;
+document.getElementById("summaryTitle").textContent = summaryTitle;
 // Function to handle printing the resume
 function printResume() {
     var printContent = document.getElementById('print-content').innerHTML;

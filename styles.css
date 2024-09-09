@@ -267,3 +267,140 @@ main {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     margin-top: 20px;
 }
+
+
+
+@media print {
+    /* Set A4 page size */
+    @page {
+        size: A4;
+        margin: 0.5in; /* Adjusted margins to reduce excessive space */
+    }
+
+    body {
+        margin: 0;
+        padding: 0;
+        background: white;
+    }
+
+    /* Content container */
+    .resume-container {
+        width: 100%;
+        max-width: 7.5in; /* Adjusted width to fit within margins */
+        height: auto;
+        padding: 1in; /* Padding inside the container */
+        margin: auto;
+        box-sizing: border-box;
+        border: none; /* Removed border */
+    }
+
+    /* Adjust spacing and prevent page breaks */
+    section {
+        page-break-inside: avoid;
+        margin-bottom: 1rem; /* Space between sections */
+    }
+
+    /* Adjust font sizes */
+    h1 {
+        font-size: 24px;
+        margin-bottom: 0.5rem;
+    }
+    h2 {
+        font-size: 20px;
+        margin-bottom: 0.4rem;
+    }
+    h3 {
+        font-size: 18px;
+        margin-bottom: 0.3rem;
+    }
+    p, li {
+        font-size: 12px;
+        line-height: 1.4;
+    }
+
+    /* Ensure no additional content like URLs or timestamps */
+    @page :left {
+        margin: 0.5in;
+    }
+
+    /* Hide print header/footer elements */
+    @media print {
+        .no-print {
+            display: none;
+        }
+    }
+}
+
+/* Hide content on screen */
+#print-content {
+    display: none;
+}
+
+/* Show content only when printing */
+@media print {
+    #print-content {
+        display: block;
+    }
+
+    /* Remove any other unwanted content or styles */
+    body * {
+        visibility: hidden;
+    }
+    #print-content,
+    #print-content * {
+        visibility: visible;
+    }
+    #print-content {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+    }
+
+    /* Set A4 page size */
+    @page {
+        size: A4;
+        margin: 0.5in; /* Adjust margins */
+    }
+
+    /* Adjust spacing and font sizes for print */
+    .resume-container {
+        width: 100%;
+        max-width: 7.5in; /* Adjusted width */
+        height: auto;
+        padding: 1in; /* Padding inside the container */
+        margin: auto;
+        box-sizing: border-box;
+    }
+
+    section {
+        page-break-inside: avoid;
+        margin-bottom: 1rem; /* Space between sections */
+    }
+
+    h1 {
+        font-size: 24px;
+        margin-bottom: 0.5rem;
+    }
+    h2 {
+        font-size: 20px;
+        margin-bottom: 0.4rem;
+    }
+    h3 {
+        font-size: 18px;
+        margin-bottom: 0.3rem;
+    }
+    p, li {
+        font-size: 12px;
+        line-height: 1.4;
+    }
+
+    /* Hide unwanted print headers/footers */
+    @media print {
+        .no-print {
+            display: none;
+        }
+    }
+}
+
+
